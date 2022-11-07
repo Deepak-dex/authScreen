@@ -3,6 +3,7 @@ import styles from './style'
 import { View, Text, Modal, Pressable, ScrollView,  } from 'react-native'
 
 import Slider from '@react-native-community/slider'
+import CustomSlider from '../components/slider/Slider'
 
 import {COLORS} from '../../../constants'
 
@@ -105,7 +106,7 @@ export default function FeedBack1Screen({navigation}) {
         <Text style={styles.ratingLabel}>Very Bad</Text>
         <Text style={styles.ratingLabel}>Very Good</Text>
       </View>
-      <Slider 
+      {/* <Slider 
         style={styles.slider} 
         minimumValue={0} 
         maximumValue={10} 
@@ -114,7 +115,13 @@ export default function FeedBack1Screen({navigation}) {
         thumbTintColor="black"
         value={sliderValue}
         onSlidingComplete={(value)=>setSliderValue(Math.floor(value))}
-      />  
+      />   */} 
+      <CustomSlider
+        boundaryMin={0} 
+        boundaryMax={10}
+        initVal={sliderValue}
+        onSlide={(val)=>setSliderValue(val)}
+      />
 
 
       <Text style={styles.subHeading}>Yay or Nay :</Text>

@@ -3,6 +3,7 @@ import styles from './style'
 import { View, Text, Pressable, ScrollView, TextInput  } from 'react-native'
 
 import Slider from '@react-native-community/slider'
+import CustomSlider from '../components/slider/Slider'
 
 import {COLORS} from '../../../constants'
 
@@ -88,7 +89,7 @@ const FeedBackRating = ({value,index,feedBackObjArr,setFeedBackObjArr})=>{
           <Text style={styles.ratingLabel}>Very Bad</Text>
           <Text style={styles.ratingLabel}>Very Good</Text>
         </View>
-        <Slider 
+        {/* <Slider 
           style={styles.slider} 
           minimumValue={0} 
           maximumValue={10} 
@@ -98,6 +99,12 @@ const FeedBackRating = ({value,index,feedBackObjArr,setFeedBackObjArr})=>{
           step={1}
           value={value}
           onSlidingComplete={(handleRating)}
+        /> */}
+        <CustomSlider
+          boundaryMin={0} 
+          boundaryMax={10}
+          initVal={value}
+          onSlide={handleRating}
         />
       </View>
   )

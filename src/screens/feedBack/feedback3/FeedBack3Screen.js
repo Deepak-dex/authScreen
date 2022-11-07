@@ -3,6 +3,7 @@ import styles from './style'
 import { View, Text, Pressable, ScrollView, TextInput, TouchableOpacity  } from 'react-native'
 
 import Slider from '@react-native-community/slider'
+import CustomSlider from '../components/slider/Slider'
 
 import {COLORS} from '../../../constants'
 
@@ -83,7 +84,7 @@ export default function FeedBack3Screen({navigatoin,route}) {
           <Text style={styles.ratingLabel}>{sliderValue}</Text>
           <Text style={styles.ratingLabel}>Very Good</Text>
         </View>
-        <Slider 
+        {/* <Slider 
           style={styles.slider} 
           minimumValue={0} 
           maximumValue={10} 
@@ -92,6 +93,12 @@ export default function FeedBack3Screen({navigatoin,route}) {
           thumbTintColor="black"
           value={sliderValue}
           onSlidingComplete={(val)=>setSliderValue(Math.floor(val))}
+        /> */}
+        <CustomSlider
+          boundaryMin={0} 
+          boundaryMax={10}
+          initVal={sliderValue}
+          onSlide={(val)=>setSliderValue(val)}
         />
 
     </ScrollView>
