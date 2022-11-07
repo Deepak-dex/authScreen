@@ -7,14 +7,14 @@ export const COLORS = {
     primaryPink: "#F84D80", 
 
     white: "#FFFFFF",
-    black: "#333333",
-    darkGrey: "#858585",
-    grey: "#C2C2C2",
-    lightGrey: "#EAEAF4",
-    lightGrey80: "#EEEEF7",
-    lightGrey60: "#F2F2F9",
-    lightGrey40: "#F6F7FB",
-    lightGrey20: "#FCFCFD",
+    textBlack: "#333333",
+    textBlack60: "#858585",
+    textBlack30: "#C2C2C2",
+    grey100: "#EAEAF4",
+    grey80: "#EEEEF7",
+    grey60: "#F2F2F9",
+    grey40: "#F6F7FB",
+    grey20: "#FCFCFD",
 
     blue: "#506CFC",
     green: "#13B56A",
@@ -28,7 +28,7 @@ export const COLORS = {
 export const SIZES = {
     // global sizes
     base: 8,
-    font: 14,
+    font: 14,   
     radius: 12,
     padding: 24,
 

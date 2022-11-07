@@ -1,10 +1,11 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-import {AuthScreen,OtpScreen,UserOnBoard} from './src/screens';
+import {AuthScreen,OtpScreen,UserOnBoard,BankTransfer,Investment, FeedBack1Screen, FeedBack2Screen, FeedBack3Screen} from './src/screens';
 
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import Navigator from './src/navigation/Navigator';
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -20,10 +21,7 @@ export default function App() {
   } else {
     return (
       <View style={styles.container}>
-        <AuthScreen/>
-        {/* <OtpScreen/> */}
-        {/* <UserOnBoard/> */}
-        <StatusBar style="auto" />
+        <Navigator/>
       </View>
     );
   }
@@ -32,7 +30,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    justifyContent: 'center',
+    backgroundColor: '#fff'
   },
 });

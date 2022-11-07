@@ -12,7 +12,7 @@ const OtpScreen = () => {
   const [timer, setTimer] = useState(60);
   const [resend, setResend] = useState(true);
   const [otp, setOtp] = useState("");
-  const [otpError, setOtpError] = useState(false);
+  const [otpError, setOtpError] = useState(true);
   const [isFilled, setIsFilled] = useState(false);
   const [phoneNumber, setPhoneNumber] = useState("+91 9876543210");
   const [isDisabled, setIsDisabled] = useState(true);
